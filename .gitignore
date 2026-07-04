@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+data/online_retail.csv
+data/cleaned_online_retail.csv
+
+models/*.pkl
+
+.venv/
+env/
