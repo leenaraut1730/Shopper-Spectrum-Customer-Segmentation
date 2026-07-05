@@ -116,9 +116,12 @@ kmeans = joblib.load("models/kmeans_model.pkl")
 
 scaler = joblib.load("models/scaler.pkl")
 
-similarity_df = joblib.load("models/similarity_matrix.pkl")
-
-product_list = joblib.load("models/product_list.pkl")
+try:
+    similarity_df = joblib.load("models/similarity_matrix.pkl")
+    product_list = joblib.load("models/product_list.pkl")
+except FileNotFoundError:
+    similarity_df = None
+    product_list = None
 
 # ==================================================
 # SIDEBAR
